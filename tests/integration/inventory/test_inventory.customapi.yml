@@ -1,0 +1,7 @@
+---
+plugin: custom_api_inventory # Ansible에게 custom_api_inventory 플러그인을 사용하도록 지시
+api_url: http://localhost:8080/api/v1/ansible/inventory # custom_api_inventory 플러그인의 'api_url' 옵션 값
+api_token: test_token_123 # custom_api_inventory 플러그인의 'api_token' 옵션 값
+use_ssl_verify: no # custom_api_inventory 플러그인의 'use_ssl_verify' 옵션 값
+timeout: 5 # custom_api_inventory 플러그인의 'timeout' 옵션 값
+

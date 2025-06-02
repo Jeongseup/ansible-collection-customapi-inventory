@@ -1,0 +1,13 @@
+namespace: jeongseup
+name: customapi_inventory
+version: 0.1.0
+readme: README.md
+authors:
+  - Jeongseup <seup87@gmail.com>
+description: An Ansible dynamic inventory plugin to fetch data from the custom API.
+tags:
+  - inventory
+  - dynamic_inventory
+  - api
+dependencies: {}
+repository: https://github.com/Jeongseup/ansible-collection-customapi-inventory
