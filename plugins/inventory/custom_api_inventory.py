@@ -4,12 +4,8 @@
 
 from __future__ import annotations
 
-
-PLUGIN_NAME = 'custom_api_inventory'
-
-
-DOCUMENTATION = f'''
-    name: {PLUGIN_NAME}
+DOCUMENTATION = '''
+    name: custom_api_inventory
     plugin_type: inventory
     short_description: Custom Ansible inventory plugin to fetch data from an API
     description:
@@ -19,7 +15,7 @@ DOCUMENTATION = f'''
       plugin:
         description: Name of the plugin.
         required: True
-        choices: ['{PLUGIN_NAME}']
+        choices: ['custom_api_inventory']
       api_url:
         description: The URL of the custom API endpoint.
         required: True
@@ -54,7 +50,7 @@ import json
 
 
 class InventoryModule(BaseInventoryPlugin, Constructable):
-    NAME = PLUGIN_NAME # 전역 변수 PLUGIN_NAME 사용
+    NAME = 'custom_api_inventory'
 
     def __init__(self):
         super(InventoryModule, self).__init__()

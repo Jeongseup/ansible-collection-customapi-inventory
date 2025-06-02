@@ -24,6 +24,16 @@ pytest-mock = "^3.14.1"
 poethepoet = "^0.34.0"
 
 [tool.poe.tasks]
+
+[tool.poe.tasks.build-collection] # 작업 이름은 publish-collection 또는 원하는 다른 이름
+cmd = "ansible-galaxy collection build ."
+help = "Builds the Ansible collection archive (.tar.gz) in the project root."
+
+[tool.poe.tasks.publish-collection] # 작업 이름은 publish-collection 또는 원하는 다른 이름
+cmd = "ansible-galaxy collection publish ${archive_file} --api-key $GALAXY_API_KEY"
+args = [{name = "archive_file", help="The path to the collection .tar.gz archive file to publish."}]
+help = "Publishes a specific collection archive to Ansible Galaxy. Loads GALAXY_API_KEY from .env file."
+
 # 작업 이름 (예: test-inventory)을 자유롭게 지정할 수 있습니다.
 # 명령어는 프로젝트 루트 디렉토리에서 실행되는 것을 기준으로 작성합니다.
 [tool.poe.tasks.test-inventory] # 작업 이름은 test-inventory 또는 원하는 다른 이름
@@ -33,6 +43,7 @@ help = "Runs ansible-inventory for integration testing (using shell execution)"
 [tool.poe.tasks.test-vars] # 작업 이름은 test-vars 또는 원하는 다른 이름
 shell = "ANSIBLE_CONFIG=./tests/integration/ansible.cfg ansible-inventory --vars --list"
 help = "Runs ansible-inventory variables"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

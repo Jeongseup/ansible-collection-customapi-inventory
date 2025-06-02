@@ -5,6 +5,8 @@ readme: README.md
 authors:
   - Jeongseup <seup87@gmail.com>
 description: An Ansible dynamic inventory plugin to fetch data from the custom API.
+license:
+  - MIT # 또는 license: "MIT" (단일 라이선스인 경우 문자열도 가능)
 tags:
   - inventory
   - dynamic_inventory
