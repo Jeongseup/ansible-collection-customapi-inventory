@@ -15,7 +15,7 @@ DOCUMENTATION = '''
       plugin:
         description: Name of the plugin.
         required: True
-        choices: ['custom_api_inventory']
+        choices: ['custom_api_inventory','jeongseup.customapi_inventory.custom_api_inventory','community.general.virtualbox']
       api_url:
         description: The URL of the custom API endpoint.
         required: True
