@@ -1,0 +1,18 @@
+# .galaxy-ignore
+# 이 파일에 명시된 파일과 디렉터리는 'ansible-galaxy collection build' 시 제외됩니다.
+# 문법은 .gitignore와 동일합니다.
+
+# --- 환경 변수 및 민감 정보 ---
+# .env 파일은 절대 포함시키지 않습니다.
+.env
+
+#__pycache__/
+tests/
+#.pytest_cache/
+
+# OS 관련 파일 (예: macOS)
+.DS_Store
+
+# 빌드 결과물 (자기 자신 포함 방지)
+*.tar.gz
+
